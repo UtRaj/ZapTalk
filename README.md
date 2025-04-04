@@ -46,62 +46,50 @@ A lightning-fast, real-time chat application built with the MERN stack, Socket.i
 ```
 git clone https://github.com/UtRaj/ZapTalk.git
 cd ZapTalk
-
 ```
 
 2️⃣ Setup the Client (Frontend)
 
 
 ```
-
 cd client
 npm install
-
 ```
 
 
 ### Create a .env file in client/ and add:
 
 ```
-
 REACT_APP_GOOGLE_CLIENT_ID=your-google-client-id
 REACT_APP_SERVER_URL=http://localhost:8000
-
 ```
 
 
 ```
 npm start
-
 ```
 
 
 3️⃣ Setup the Server (Backend)
 
 ```
-
 cd server
 npm install
-
 ```
 
 
 ### Create a .env file in server/ and add:
 
 ```
-
 PORT=8000
 MONGO_URI=your-mongodb-uri
 SECRET=your-jwt-secret
 CLIENT_ID=your-google-client-id
 BASE_URL=http://localhost:3000
-
 ```
 
 ```
-
 npm start
-
 ```
 
 
@@ -111,20 +99,6 @@ npm start
 
 🔹 Backend: http://localhost:8000
 
-
-
-
-
-To get your Google ClientID for authentication, go to the [credential Page ](https://console.cloud.google.com/apis/credentials) (if you are new, then [create a new project first](https://console.cloud.google.com/projectcreate) and follow the following steps;
-
-- Click Create credentials > OAuth client ID.
-- Select the Web application type.
-- Name your OAuth client and click Create
-- Remember to provide your domain and redirect URL so that Google identifies the origin domain to which it can display the consent screen. In development, that is going to be `http://localhost:3000` and `http://localhost:3000/login`
-- Copy the Client ID and assign it to the variable `REACT_APP_GOOGLE_CLIENT_ID` in your .env file
-
-
-
 # 🔑 Setting Up Google Authentication (Client ID)
 
 To enable Google Sign-In for your real-time chat application, follow these steps:
@@ -133,21 +107,19 @@ To enable Google Sign-In for your real-time chat application, follow these steps
 
 1. Go to Google Cloud Console
 
-2. Click "Create Project" (if you don’t have one)
+2. Click **Create Project** (if you don’t have one)
 
 3. Navigate to APIs & Services → Credentials
 
-4. Click "Create Credentials" → "OAuth Client ID"
+4. Click **Create Credentials** → "OAuth Client ID"
 
-5. Select "Web Application" as the application type
+5. Select **Web Application** as the application type
 
 Set the Authorized Redirect URIs as:
 
 ```
-
 http://localhost:3000
 http://localhost:3000/login
-
 ```
 
 6. Click Create, then copy your Client ID to Inside Client Directory at (client/.env) and Inside Server Directory at (server/.env) .
